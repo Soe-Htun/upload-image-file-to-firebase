@@ -4,7 +4,7 @@
       <h2>Upload image to firebase</h2>
 
       <div class="image-upload">
-        <label for="file-input" style="vertical-align:middle">Select file <br>
+        <label for="file-input" style="width:200px;position:fixed;left:46.5%">Select file <br>
         <span>
           <i class="fas fa-upload"></i>
         </span>
@@ -18,7 +18,7 @@
       </p>
     </div>
     <div>
-      <img :src="picture" alt="" style="width:300px;height:300px"><br>
+      <img :src="picture" alt="" style="width:300px;height:300px;"><br>
       <button @click="onUpload()">Upload</button>
     </div>
       
@@ -47,7 +47,7 @@ export default {
     onUpload(){
       this.picture=null;
       const storageRef=firebase.storage().ref(`${this.imgData.name}`).put(this.imgData);
-    storageRef.on(`state_changed`, snapshot =>{
+      storageRef.on(`state_changed`, snapshot =>{
       this.uploadValue=(snapshot.bytesTransferred/snapshot.totalBytes)*100;
     }, error=>{
       console.log(error.message)
@@ -67,6 +67,8 @@ export default {
 <style>
 input{
   display: none;
+  width: 200px;
+  height: 60px;
 }
 
 .image-upload{
