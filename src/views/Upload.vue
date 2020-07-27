@@ -74,7 +74,7 @@ input{
   height: 60px;
   text-align: center;
   position: relative;
-  left: 45%;
+  left: 46.5%;
   background-color: #34eb92;
 }
 button{
