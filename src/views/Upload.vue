@@ -2,9 +2,8 @@
   <div class="upload">
     <div>
       <h2>Upload image to firebase</h2>
-
       <div class="image-upload">
-        <label for="file-input" style="width:200px;position:fixed;left:46.5%">Select file <br>
+        <label for="file-input" style="width:230px;text-align:center">Select file <br>
         <span>
           <i class="fas fa-upload"></i>
         </span>
@@ -18,7 +17,7 @@
       </p>
     </div>
     <div>
-      <img :src="picture" alt="" style="width:300px;height:300px;"><br>
+      <img :src="picture" alt="" style="width:230px;height:200px;"><br>
       <button @click="onUpload()">Upload</button>
     </div>
       
@@ -72,11 +71,10 @@ input{
 }
 
 .image-upload{
-  width: 200px;
+  width: 230px;
   height: 60px;
   text-align: center;
-  position: relative;
-  left: 46.5%;
+  margin: 0 auto;
   background-color: #34eb92;
 }
 button{
